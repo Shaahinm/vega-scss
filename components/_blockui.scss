@@ -1,0 +1,44 @@
+.pe-blockui {
+    left: 0 !important;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto !important;
+    min-width: 145px;
+    max-width: 150px;
+}
+
+.pe-blockui .pe-blockui-content {
+    position: relative;
+    border: 0;
+    padding: 0 !important;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    zoom: 1;
+    border-radius: 5px;
+    .loading-indicator {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .loading-text {
+        font-weight: 700;
+        padding: 10px 5px;
+        font-size: 0.8em;
+    }
+}
+
+.pe-blockui .pe-blockui-titlebar {
+    padding: .4em 1em;
+    position: relative
+}
+
+.ui-draggable .pe-blockui-titlebar {
+    cursor: move
+}
+
+html {
+    .ui-widget-overlay {
+        background: $opac_black;
+    }
+}

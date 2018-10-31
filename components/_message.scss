@@ -1,0 +1,122 @@
+html {
+    .ui-messages {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-height: 0;
+
+        @media (min-width: 481px) {
+            min-width: 480px;
+            width: auto;
+        }
+
+        z-index: 5;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        .ui-messages-warn,
+        .ui-messages-error,
+        .ui-messages-info,
+        .ui-messages-fatal {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+
+            background: #333;
+            color: $white;
+            border-color: #333;
+
+            ul {
+                margin: 4px;
+                font-size: 14px;
+                width: 100%;
+
+                li {
+                    padding: 4px 16px;
+                }
+            }
+        }
+
+        .ui-messages-close {
+            height: 62px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+
+            &:before {
+                content: 'Close';
+                cursor: pointer;
+                position: absolute;
+                color: $blue;
+                font-weight: 500;
+            }
+        }
+
+        .ui-messages-info {
+            .ui-messages-info-icon {
+                display: none;
+            }
+            ul {
+                .ui-messages-info-summary {
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+        }
+
+        .ui-messages-warn {
+            .ui-messages-warn-icon {
+                display: none;
+            }
+
+            ul {
+                .ui-messages-warn-summary {
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+        }
+
+        .ui-messages-error {
+            background: $red;
+            color: white;
+            border-color: $red;
+
+            .ui-messages-error-icon {
+                display: none;
+            }
+
+            ul {
+                .ui-messages-error-summary {
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .ui-message {
+        &.ui-message-error {
+            padding: 0;
+            margin: 0;
+            border: 0;
+
+            &.inline-error {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                display: inline-block;
+                text-align: right;
+                background: transparent;
+                border: 0;
+                margin-bottom: 5px;
+                top: 0px;
+                font-size: 13px;
+                height: 16px;
+            }
+        }
+    }
+}

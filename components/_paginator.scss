@@ -1,0 +1,100 @@
+.table-content-wrapper.report-table.paginator-no-shadow {
+
+    .ui-paginator.ui-paginator-top,
+    .ui-paginator.ui-paginator-bottom {
+        box-shadow: none;
+    }
+
+}
+
+.ui-paginator.ui-paginator-top,
+.ui-paginator.ui-paginator-bottom {
+    height: $navbar-height;
+    padding: 0;
+    line-height: $navbar-height;
+    margin: 0;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 15px 17px -20px rgba(0, 0, 0, 0.75);
+
+    // .ui-paginator-first {
+    //     display: none;
+    //     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVDhPYyACMEFpGGCEYqKAGBBfAuJcMI+BgQuI9wJxH5hHAIA0XwXis0AsCMQgzQeB+D4QKwAxXjA4NAsBMUzzAyAmS/MBICZKsygQgzSfA2KQZk4gBml+CMQENYMAuj+ZgXg5EL8DYiMgJgqMGoIJQIaAYgJkiBwQIxtiCMREAZAh24E4GcyDGLIAiBvAPMoBAwMAuEsv4OsoC7kAAAAASUVORK5CYII=') no-repeat center;
+    // }
+    // .ui-paginator-last {
+    //     display: none;
+    //     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACISURBVDhPY0ACTFAaBtD5BMF6IF4CxMxgHgNDHxDvBWIuMI8IYATEb4F4ORCDDFEA4vtAfBCIh6gh74AY2ZAHQEwVQw4AMUmGvAdikCGgaAUZ8hCIQYZwAjFB4AHEP4C4C8zDdBVeMBI1uwMxsmZDICZaMwgsBOIWCBMMGoF4PhATpZlMwMAAAL6eL+QQi6VVAAAAAElFTkSuQmCC') no-repeat center;
+    // }
+    .ui-paginator-current {
+        font-size: 13px;
+        color: #999;
+    }
+
+    .ui-paginator-next {
+        // background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC7SURBVEhL7dGxCcJAGMXxA8FaUUitG9g5gWDjBHZxDEELC2t7BxBncQIX0NgKWoj6/zTCIZfcp3KFcA9+JIHce4GYmL/PJL8Gyw1BR2Qg6Mhr4OeRGoZYYoMMZ9gDX40kWOCE97Ii6pEBDnCV+HhHRrjAdVhjisL0Eay8jh1cBzVKyyUz2Af2WGMM+ScdtNFAFfa73nL5+iOuWKGHCsqiLpek2KL7eNJFXS6Zo/m8VUddLmnl15iYT2LMHZsJbUvfXMIFAAAAAElFTkSuQmCC') no-repeat center;        
+        background: url('/dC/resources/images/arrow-right.svg') no-repeat center;
+        height: 24px;
+        line-height: 24px;
+        display: flex;
+        flex: 0 0 24px;
+
+        &.ui-state-disabled {
+            background: none;
+            background-color: #999;
+            -webkit-mask-image: url('/dC/resources/images/arrow-right.svg');
+            mask-image: url('/dC/resources/images/arrow-right.svg');
+        }
+    }
+
+    .ui-paginator-prev {
+        background: url('/dC/resources/images/arrow-left.svg') no-repeat center;
+        height: 24px;
+        line-height: 24px;
+        display: flex;
+        flex: 0 0 24px;
+
+        &.ui-state-disabled {
+            background: none;
+            background-color: #999;
+            -webkit-mask-image: url('/dC/resources/images/arrow-left.svg');
+            mask-image: url('/dC/resources/images/arrow-left.svg');
+        }
+    }
+
+    // .ui-paginator-pages {
+    //     display: none;
+    // }
+
+    .ui-paginator-page {
+        font-weight: 500;
+        font-size: 14px;
+        width: 28px;
+    }
+
+    .ui-state-active,
+    .ui-state-hover {
+        color: $blue;
+    }
+
+    select {
+        width: 50px;
+        height: $form-input-height;
+        border: 1px solid #ddd;
+        background: #eee;
+        display: none;
+    }
+}
+
+.exporter {
+    position: absolute;
+    right: 1em;
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+
+    }
+}

@@ -1,0 +1,10 @@
+.chartjs-render-monitor {
+    max-height: 450px;       
+}
+
+.chart-container.short {
+    .chartjs-render-monitor {
+        max-height: 370px;       
+    }
+    
+}

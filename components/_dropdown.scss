@@ -1,0 +1,228 @@
+.dropdown {
+    &:focus {
+        outline: 1px solid rgba(81,184,242, 0.5);
+    }
+    label {
+        margin: 0;
+    }
+
+    &.ui-state-disabled {
+        background: #ddd;
+
+        .ui-selectonemenu-trigger {
+            background: #ddd !important;
+        }
+    }
+
+    &.ui-selectonemenu {
+        &.no-border {
+            border: 0;
+            // min-width: 110px;
+
+            .ui-selectonemenu-trigger {
+                right: -10px;
+            }
+        }
+
+        &.bold {
+            .ui-selectonemenu-label {
+                font-weight: 500;
+            }
+        }
+
+        &.large-font {
+            .ui-selectonemenu-label {
+                font-size: 1.5em;
+                margin-right: 5px;
+            }
+        }
+
+        &.fixed-200 {
+            width: 200px !important;
+            min-width: 200px !important;
+            max-width: 200px !important;
+        }
+
+        &.white-toggle {
+            .ui-selectonemenu-trigger {
+                background: $white;
+            }
+        }
+
+        &.gray-toggle {
+            .ui-selectonemenu-trigger {
+                background: #ddd;
+            }
+        }
+
+        display: inline-block;
+        position: relative;
+        width: auto;
+        zoom: 1;
+        cursor: pointer;
+        padding-right: 0;
+        vertical-align: top;
+        height: $form-input-height;
+        box-sizing: border-box;
+        border: 1px solid $input-elements-border-color;
+
+        .ui-selectonemenu-label {
+            padding: 0 16px 0 10px;
+            margin: 0;
+            line-height: $form-input-height;           
+        }
+
+        &.svg {
+            color: #333 !important;
+            .ui-selectonemenu-trigger {
+                width: 24px;
+
+                &.ui-state-hover {
+                    background: $white;
+                    .ui-icon {
+                        background-color: #666;
+                        -webkit-mask-image: url('/dC/resources/images/dropdown-arrow-down.svg');
+                        mask-image: url('/dC/resources/images/dropdown-arrow-down.svg');
+                        // top: 5px;    
+                    }
+                }
+
+                .ui-icon {
+                    background: none;
+                    background-color: #999;
+                    -webkit-mask-image: url('/dC/resources/images/dropdown-arrow-down.svg');
+                    mask-image: url('/dC/resources/images/dropdown-arrow-down.svg');
+                    top: 5px;
+
+                }
+            }            
+        }
+
+        &.mw-120 {
+            min-width: 120px !important;
+        }
+
+        .ui-selectonemenu-trigger {
+            width: 24px;
+
+            &.ui-state-hover {
+                background: #ddd;
+            }
+
+            .ui-icon {
+                background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC') no-repeat center;
+                width: 24px;
+
+            }
+        }
+    }
+}
+
+html {
+    .ui-selectonemenu-panel.ui-widget.ui-widget-content.panelBizpartyBankAccountStyle {
+        max-width: 398px !important;
+    }
+
+    .ui-selectonemenu-panel {
+        background: $white;
+        max-width: 358px !important;
+        
+        @media screen and (max-width: 425px) {
+            max-width: 343px !important;
+        }        
+        @media screen and (max-width: 375px) {
+            max-width: 341px !important;
+        }
+        @media screen and (max-width: 320px) {
+            max-width: 286px !important;
+        }
+
+        .ui-selectonemenu-table th {
+            border: 0;
+            background: #eee;
+            font-size: 14px;
+            color: $default-a-color;
+        }
+
+        .ui-selectonemenu-items-wrapper {
+            max-height: 500px !important;
+            height: auto !important;
+            .ui-selectonemenu-list {
+                padding: 0;
+            }
+            .ui-selectonemenu-list-item {
+                font-size: 14px;
+                white-space: inherit;
+                padding: 11px 16px;
+                margin: 0;
+                &:hover {
+                    background: $light-gray;
+                }
+
+                &.ui-state-highlight {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// this is for dropdown item holder div
+html .ui-selectonemenu-items-wrapper {
+    padding: 16px 0;
+
+    // .ui-selectonemenu-items {
+    //     &.ui-selectonemenu-table {
+    //         border-spacing: 5px;
+    //         border-collapse: separate;
+    //     }
+    // }
+    .ui-selectonemenu-itmes {
+        tr {
+            th {
+                border: 0;
+                padding: 12px;
+                font-size: 0.9em;
+            }
+        }
+    }    
+    .ui-selectonemenu-item {
+        &.ui-selectonemenu-row {
+            td {
+                border: 0;
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            &.ui-state-hover {
+                background: #ddd;
+            }
+
+            &.ui-state-highlight {
+                font-weight: 500;
+                background: #eee;
+            }
+        }
+    }
+}
+
+//searchbox in dropdown
+.ui-selectonemenu-filter-container {
+    height: $form-input-height;
+    width: 100%;
+
+    .ui-selectonemenu-filter {
+        height: $form-input-height;
+        font-size: 15px;
+        border: 1px solid $input-elements-border-color;
+        padding: 5px 10px;
+        width: 100%;
+    }
+
+    .ui-icon {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAABJElEQVRIS+3VwUZFURTG8d8VPUA0iOgBEjVs1KBJ1CSKiJ4h0SCN4o6iQQ8RDSIiNYkGzUvRNCIiIiIaZXEOdTv37FvnuKOzx3uv//6+9a29W/qwWn1gaCB/crmxq3a7ZrCNSbziClt46ZWU6skG9vCEcwxhHm+YxV0voDLIBK5xihV8ZAVD0SUeMFUV0sYmRgusyRWO4z4FKlNyiGmMFRSZwxkWMqWlnDLILuLGIwVKIgihNOy6qaIkenKLY6zh/VtPLvBYR0+iZn7j5yxdwwirBvCJZZxUUZKfjTnZ6ZiTPMoBiuSF2q4rNSfdDg4igrGYKVrFUbfN/4VEvQAdYCllXRVIJ2gf60VqqkKiZoQgnpp4dqJHv1YdkFS4mj8+6dCPDV8S6jIaXBfvAAAAAABJRU5ErkJggg==') no-repeat center;
+        width: $form-input-height;
+        height: $form-input-height;
+        top: 6px !important;
+    }
+}

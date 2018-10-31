@@ -1,0 +1,177 @@
+.form-button-container {
+  width: 100%;
+  height: 72px;
+  border-top: 1px solid #eee;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  margin: 4px;
+  border: none;
+  padding: 5px 16px;
+  min-width: 80px;
+  transition: all 0.5s ease-out;
+
+  &.primary-action-button {
+    display: inline-block;
+    background-color: $primary-button-background;
+    color: $primary-button-color;
+    text-transform: uppercase;
+
+    &:hover {
+      box-shadow: 0px 2px 4px 0px rgba(122, 122, 122, 0.6);
+      background: $primary-button-hover-background;
+    }
+  }
+
+  &.secondary-action-button {
+    display: inline-block;
+    color: $blue;
+    background: $white;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+
+  &.info-action-button {
+    display: inline-block;
+    background-color: $info-button-background;
+    color: $info-button-color;
+    text-transform: uppercase;
+
+    &:hover {
+      box-shadow: 0px 2px 4px 0px rgba(122, 122, 122, 0.6);
+      background: $info-button-hover-background;
+    }
+  }
+
+  &.link-button {
+    display: inline-block;
+    color: $blue;
+    background: transparent;
+    font-weight: 500;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+}
+
+.ui-menubutton {
+  display: flex;
+  height: 40px;
+
+  .ui-button-icon-left.ui-icon.ui-c.ui-icon-triangle-1-s {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC")
+      no-repeat center;
+    width: 24px;
+    height: 20px;
+  }
+
+  .ui-button-icon-left {
+    right: 0;
+    left: auto;
+  }
+
+  .ui-button-text.ui-c {
+    padding: 0.3em 2.1em 0.3em 1em;
+  }
+
+  button {
+    background: inherit;
+    border: 0;
+  }
+}
+
+// this is the panel which menubutton uses to display items
+
+.ui-menu.ui-menu-dynamic {
+  background: $white;
+
+  .ui-state-hover {
+    background: #eee;
+  }
+}
+
+.circular-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.red {
+    background: $dashboard-red;
+    color: $white;
+  }
+}
+
+.btn-default {
+  color: $blue;
+  background: $white;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $info-button-background;
+  color: $info-button-color;
+  border: 0;
+  cursor: pointer;
+}
+
+.button-menu {
+  position: relative;
+  display: inline-block;  
+  .icon-button {
+    background: transparent;
+    border: none;
+  }
+
+  .content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background: #eee; 
+    width: 180px;
+    padding: 16px 0;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    .option {
+        padding: 8px 0;
+        margin: 0 !important;
+        button {
+            border: 0;
+            background: transparent;   
+            width: 100%;
+            text-align: left;         
+        }
+        &:hover {
+            background: #ddd;       
+        }
+    }    
+  }
+
+  &:hover {
+    .content {
+      display: block;
+    }
+  }
+}
+
+
+.icon-button {
+    border: 0;
+    background: 0;
+    width: 40px;
+    height: 40px;
+}

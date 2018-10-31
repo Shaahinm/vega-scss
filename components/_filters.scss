@@ -1,0 +1,74 @@
+.filters {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+        .items {
+            background: $white;
+            height: $navbar-height;
+            @media screen and (max-width: 900px) {
+                height: auto;
+            }
+            display: flex;
+            align-items: center;
+            .item {
+                display: flex;
+                flex: 0 0 200px;
+            }
+            ul {                               
+                li {                    
+                    @media screen and (max-width: 900px) {
+                        display: block;
+                        border: 0 none;
+                    }                    
+                }
+            }
+        }
+        .clear-filters {
+            font-size: 0.8em;
+            padding: 8px 0;
+            font-weight: 500;
+            color: $blue;
+            cursor: pointer;
+        }
+        &.full-width {
+            background: $white;
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.46);
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .button {
+        &.apply-filter-button {
+            margin: 0;
+            height: $navbar-height;
+            background: $green;
+            color: $white;
+            min-width: 240px;
+            width: 100%;
+            .ui-button-text {
+                padding: 0;
+            }
+        }
+    }
+
+    .apply-button {
+        @media screen and (max-width: 900px) {
+            margin: 10px;
+        }
+    }
+}
+
+.timebucket-filter {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 24px;
+}

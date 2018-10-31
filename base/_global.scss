@@ -1,0 +1,66 @@
+.material-icons {
+    padding: 8px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+a {
+    text-decoration: none;
+    color: $default-a-color;
+    outline: 0;    
+    &:visited {
+        color: $default-a-color;
+    }
+    &:hover {
+        color: $default-a-color;
+    }
+    &:active {
+        color: $default-a-color;
+    }
+
+    &.block {
+        display: inline-block;
+        width: 100%;
+        font-size: 1em;
+        text-transform: capitalize;
+    }
+}
+
+body {
+    background: #ECEFF1;
+    font-weight: 400;
+    color: $default-text-color;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    &.modal-is-open {
+        overflow-y: hidden;
+    }
+}
+
+button:focus {
+    outline: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.left-aligned {
+    text-align: left;
+}
+
+.right-aligned {
+    text-align: right;
+}
+
+.center-aligned {
+    text-align: center;
+}
+
+input[type=text]::-ms-clear { display: none; }
+
+.qtip-content {
+    padding: 12px;
+    background: $white;
+    color: black;
+    box-shadow: 1px 1px 18px -4px rgba(0, 0, 0, 0.75);
+}

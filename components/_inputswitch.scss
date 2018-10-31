@@ -1,0 +1,21 @@
+.ui-inputswitch {
+    border: 1px solid $dark-border;
+    border-radius: 2px;
+
+    .ui-inputswitch-on {
+        background: $green !important;
+        color: $white !important;
+        height: 24px;
+        padding-top: 3;
+    }
+
+    .ui-inputswitch-handle {
+        background: $white;        
+        height: 24px;
+    }
+
+    .ui-inputswitch-off {        
+        color: $black !important;
+        height: 24px;
+    }
+}

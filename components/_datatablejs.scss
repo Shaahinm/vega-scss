@@ -1,0 +1,266 @@
+.dataTables_wrapper {
+    width: 100%;
+    background: $white;
+    position: relative;
+
+    // table.dataTable {
+    //     width: 100% !important;
+    // }
+  
+
+    .header,
+    .bottom {
+        width: 100%;
+        height: $navbar-height;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 1px solid $light-border;
+        padding: 0 24px;
+    }
+
+    .bottom {
+        border: 0;
+        position: absolute;
+        bottom: 0;
+        justify-content: center;
+
+        .dataTables_info {
+            padding: 0;
+            position: absolute;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .dataTables_paginate {
+            padding: 0;
+
+            .previous {
+                position: relative;
+                left: -60px;
+                cursor: pointer;
+                &.disabled {
+                    cursor: not-allowed;
+                }
+            }
+
+            .next {
+                position: relative;
+                left: 60px;
+                cursor: pointer;
+                &.disabled {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    .header {
+        .title {
+            display: flex;
+            flex: 1;
+            font-size: 1.2em;
+        }
+
+        .options {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            .dt-buttons {
+                display: flex;
+                align-items: center;
+
+                button {
+                    border: 0;
+                    background: transparent;
+                    cursor: pointer;
+
+                    // &:hover {
+                    //     border: 1px solid $light-border;
+                    // }
+                }
+
+                .dt-button-background {
+                    background: rgba(0, 0, 0, 0.2);
+                }
+
+                .dt-button-collection {
+                    position: absolute;
+                    top: 40px;
+                    right: 90px;
+                    left: auto !important;
+                    background: #eee;
+                    width: 180px;
+                    padding: 16px 0;
+                    z-index: 1;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    display: flex;
+                    flex-direction: column;
+
+                    .dt-button-collection-title {
+                        display: none;
+                    }
+
+                    button {
+                        height: 40px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #ddd;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+    }
+}
+
+table.dataTable {
+    border-spacing: 0;    
+    padding-left: 16px;
+    padding-bottom: 64px; 
+    th, td { white-space: nowrap; }
+    &.no-footer {
+        border-bottom: 0;
+        font-size: 0.9em;
+    }
+
+    &.not-sortable {
+        .sorting {
+            background-image: none;
+        }
+        .sorting_desc {
+            background-image: none;
+        }
+        .sorting_asc {
+            background-image: none;
+        }
+    }
+
+    thead {
+        tr {
+            height: 56px;
+            background: white;
+            cursor: pointer;
+
+            th,
+            td {
+                padding: 18px 24px;
+                border-bottom: 1px solid $light-border;
+                text-align: left;
+            }
+        }
+        .sorting {
+            background-image: url('/dC/resources/images/sort-arrow.png');                        
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 24px 24px;
+            background-position-x: 0;
+        }
+        .sorting_desc {
+            background-image: url('/dC/resources/images/sort-arrow-desc.png');
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 24px 24px;
+            background-position-x: 0;
+        }
+        .sorting_asc {
+            background-image: url('/dC/resources/images/sort-arrow-asc.png');
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 24px 24px;
+            background-position-x: 0;
+        }
+
+        .sorting_disabled {
+            cursor: auto;
+        }
+    }
+
+    tbody {
+        tr {
+            height: 56px;
+            background: white;
+            transition-duration: 0.28s;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-property: background-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #eee;
+            }
+
+            td {
+                vertical-align: middle;
+                position: relative;
+                box-sizing: border-box;
+                padding: 18px 24px;
+                border-bottom: 1px solid $light-border;
+            }
+        }
+    }
+}
+
+.dataTables_filter {
+    position: relative;
+    width: 40px;
+    height: $navbar-height;
+    display: flex;
+    align-items: center;
+    transition: all ease-out 0.5s;
+
+    &.show {
+        width: 220px;
+
+        input {
+            // display: block;
+            border: 1px solid #ddd;
+        }
+    }
+
+    label {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        height: 32px;
+        font-size: 15px;
+        padding: 0;
+        border: 0;
+        padding: 5px 10px;
+        width: 100%;
+    }
+
+    i {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+
+    /* clears the 'X' from Internet Explorer */
+    input[type="search"]::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    input[type="search"]::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    /* clears the 'X' from Chrome */
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+}

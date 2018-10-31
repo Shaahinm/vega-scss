@@ -1,0 +1,27 @@
+.mini-sidebar {
+    display: none;
+    position: fixed;
+    width: $mini-sidebar-width;
+    flex-direction: column;
+    position: fixed;
+    padding-top: $navbar-height;
+    @media only screen and (min-width: 880px) {
+        display: flex;
+    }
+    .link {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        box-sizing: border-box;
+        a {
+            display: inline-block;
+            width: 100%;
+            &.active {
+                border-left: 4px solid $blue;
+                i {
+                    color: $blue;
+                }
+            }            
+        }
+    }
+}

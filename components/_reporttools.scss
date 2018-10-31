@@ -1,0 +1,19 @@
+.report-tools {
+    display: flex;
+    height: $navbar-height;
+    align-items: center;
+    .exporter {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+        .item {
+            border-left: 1px solid #ddd;
+            padding: 0 20px;
+            @media screen and (max-width: 800px) {
+                padding: 0 5px;
+            }
+            height: 40px;
+        }
+    }
+}

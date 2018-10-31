@@ -1,0 +1,71 @@
+.custom-select {
+    position: relative;
+    width: auto;
+    margin: 0 8px;
+    select {
+        display: none;
+        visibility: hidden;
+        padding-right: 10px;
+    }
+
+    .select-selected {
+        background: transparent;
+
+        &:after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #999 transparent transparent transparent;
+        }
+
+        &.select-arrow-active:active {
+            border-color: transparent transparent #fff transparent;
+            top: 7px;
+        }
+    }
+
+    .select-items div {
+        color: $black;
+        padding: 8px 16px;        
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .select-selected {
+        color: $black;
+        padding: 8px 16px;
+        cursor: pointer;
+        user-select: none;
+        text-align: left;
+        padding-right: 30px;
+    }
+
+    .select-items {
+        position: absolute;
+        background-color: $white;
+        top: 100%;
+        left: 0;
+        right: 0;
+        min-width: 175px;
+        z-index: 99;
+        padding: 16px 0;
+        -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .select-hide {
+        display: none;
+    }
+
+    .select-items div:hover,
+    .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
